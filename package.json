@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:ayumitamai97/cont-codegen-sandbox-client.git",
   "author": "ayumitamai97 <ayumitamai97@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "graphql-codegen": "^0.4.0"
+  }
 }
