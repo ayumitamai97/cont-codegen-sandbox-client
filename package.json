@@ -5,13 +5,15 @@
   "repository": "git@github.com:ayumitamai97/cont-codegen-sandbox-client.git",
   "author": "ayumitamai97 <ayumitamai97@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "graphql-codegen": "^0.4.0"
-  },
   "scripts": {
-    "codegen": "graphql-codegen --config codegen.yml"
+    "codegen": "graphql-codegen --config codegen.yml -r dotenv/config"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^1.20.1",
     "@graphql-codegen/typescript": "^1.20.2"
+  },
+  "dependencies": {
+    "@graphql-codegen/typescript-operations": "^1.17.14",
+    "graphql": "^15.5.0"
   }
 }
