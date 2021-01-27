@@ -1,0 +1,13 @@
+overwrite: true
+
+schema:
+  - github:ayumitamai97/cont-codegen-sandbox-api#main:schema.graphql:
+      token: ${PERSONAL_ACCESS_TOKEN}
+
+generates:
+  ./types/graphql-schema.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+    config:
+      apolloClientVersion: 2
