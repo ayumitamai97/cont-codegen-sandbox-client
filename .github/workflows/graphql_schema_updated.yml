@@ -31,3 +31,4 @@ jobs:
           delete-branch: true
           title: 'Update GraphQL Schema'
           body: GraphQL schema has been updated
+          labels: automerge
