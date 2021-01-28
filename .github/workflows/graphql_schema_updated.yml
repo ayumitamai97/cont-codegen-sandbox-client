@@ -21,13 +21,13 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          commit-message: '[graphql-codegen] Update GraphQL Schema'
+          commit-message: '[bot] Update GraphQL Schema'
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
           branch: feature/update-graphql-schema
           branch-suffix: timestamp
           delete-branch: true
-          title: '[graphql-codegen] Update GraphQL Schema'
+          title: '[bot] Update GraphQL Schema'
           body: GraphQL schema has been updated
           labels: automerge
