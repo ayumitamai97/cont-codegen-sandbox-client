@@ -31,6 +31,7 @@ jobs:
           delete-branch: true
           title: 'Update GraphQL Schema'
           body: GraphQL schema has been updated
+          label: automerge
 
       - name: Invoke workflow_dispatch
         uses: benc-uk/workflow-dispatch@v1
