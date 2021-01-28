@@ -21,7 +21,7 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # Requires personal access token to invoke workflow_dispatch
           commit-message: '[GitHub Actions] Update GraphQL Schema'
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
@@ -29,12 +29,12 @@ jobs:
           branch: feature/update-graphql-schema
           branch-suffix: timestamp
           delete-branch: true
-          title: 'Update GraphQL Schema'
+          title: Update GraphQL Schema
           body: GraphQL schema has been updated
           labels: automerge
 
-      - name: Invoke workflow_dispatch
+      - name: Invoke automerge
         uses: benc-uk/workflow-dispatch@v1
         with:
-          workflow: automerge
+          workflow: Automerge GraphQL Schema Update # Exactly same as `name` in automerge.yml
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}

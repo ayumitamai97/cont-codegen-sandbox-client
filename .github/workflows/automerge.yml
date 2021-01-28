@@ -1,59 +1,12 @@
-# name: Auto Merge
-#
-# on:
-#   pull_request:
-#     types:
-#       - opened
-#       - labeled
-#       - unlabeled
-#       - synchronize
-#       - edited
-#       - ready_for_review
-#       - reopened
-#       - unlocked
-#   # Not specifying `check_suite` event since this repo doesn't have check suites yet
-#   # In general, it's better commenting-in the lines below
-#   # check_suite:
-#   #   types:
-#   #     - completed
-#
-# jobs:
-#   automerge:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Auto-merge Pull Request
-#         uses: pascalgn/automerge-action@v0.13.0
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#           MERGE_LABELS: automerge
+name: Automerge GraphQL Schema Update
 
+on: workflow_dispatch
 
-name: automerge
-on:
-  workflow_dispatch:
-  pull_request:
-    types:
-      - labeled
-      - unlabeled
-      - synchronize
-      - opened
-      - edited
-      - ready_for_review
-      - reopened
-      - unlocked
-  pull_request_review:
-    types:
-      - submitted
-  check_suite:
-    types:
-      - completed
-  status: {}
 jobs:
-
   automerge:
     runs-on: ubuntu-latest
     steps:
       - name: automerge
-        uses: "pascalgn/automerge-action@v0.13.0"
+        uses: pascalgn/automerge-action@v0.13.0
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
