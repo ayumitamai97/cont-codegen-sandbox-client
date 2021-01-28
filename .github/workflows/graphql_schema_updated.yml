@@ -36,5 +36,5 @@ jobs:
       - name: Invoke automerge
         uses: benc-uk/workflow-dispatch@v1
         with:
-          workflow: Automerge GraphQL Schema Update # Exactly same as `name` in automerge.yml
+          workflow: automerge # Exactly same as `name` in automerge.yml
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}

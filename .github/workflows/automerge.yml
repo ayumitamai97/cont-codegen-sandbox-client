@@ -1,4 +1,5 @@
-name: Automerge GraphQL Schema Update
+# name: Automerge GraphQL Schema Update
+name: automerge
 
 on: workflow_dispatch
 
