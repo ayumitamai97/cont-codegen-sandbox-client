@@ -40,7 +40,8 @@ export type Query = {
 
 
 export type QueryUserArgs = {
-  id: Scalars['ID'];
+  id?: Maybe<Scalars['ID']>;
+  name?: Maybe<Scalars['String']>;
 };
 
 
