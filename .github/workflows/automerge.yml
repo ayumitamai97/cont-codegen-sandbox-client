@@ -5,6 +5,12 @@ on:
     types:
       - opened
       - labeled
+      - unlabeled
+      - synchronize
+      - edited
+      - ready_for_review
+      - reopened
+      - unlocked
   # Not specifying `check_suite` event since this repo doesn't have check suites yet
   # In general, it's better commenting-in the lines below
   # check_suite:
