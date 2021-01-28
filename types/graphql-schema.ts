@@ -35,7 +35,7 @@ export type Post = {
   __typename?: 'Post';
   content?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
-  title?: Maybe<Scalars['String']>;
+  title: Scalars['String'];
 };
 
 export type Query = {
