@@ -4,10 +4,12 @@ on:
   pull_request:
     types:
       - opened
-  check_suite:
-    types:
-      - completed
-  status: {}
+      - labeled
+  # Not specifying `check_suite` event since this repo doesn't have check suites yet
+  # In general, it's better commenting-in the lines below
+  # check_suite:
+  #   types:
+  #     - completed
 
 jobs:
   automerge:
