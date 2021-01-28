@@ -36,5 +36,6 @@ jobs:
       - name: Invoke automerge
         uses: benc-uk/workflow-dispatch@v1
         with:
-          workflow: automerge # Exactly same as `name` in automerge.yml
+          # Exactly same as `name` in automerge.yml
+          workflow: automerge
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
