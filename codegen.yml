@@ -7,7 +7,7 @@ schema:
 generates:
   ./types/graphql-schema.ts:
     plugins:
-      - 'typescript'
-      - 'typescript-operations'
+      - typescript
+      - typescript-operations
     config:
       apolloClientVersion: 2
