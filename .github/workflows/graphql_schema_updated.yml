@@ -18,17 +18,16 @@ jobs:
         run: PERSONAL_ACCESS_TOKEN=${{ secrets.PERSONAL_ACCESS_TOKEN }} yarn codegen
 
       - name: Create Pull Request
-        id: cpr
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: '[GitHub Actions] Update GraphQL Schema'
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          commit-message: '[graphql-codegen] Update GraphQL Schema'
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
           branch: feature/update-graphql-schema
           branch-suffix: timestamp
           delete-branch: true
-          title: 'Update GraphQL Schema'
+          title: '[graphql-codegen] Update GraphQL Schema'
           body: GraphQL schema has been updated
           labels: automerge
