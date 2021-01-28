@@ -30,6 +30,14 @@ export type PageInfo = {
   startCursor?: Maybe<Scalars['String']>;
 };
 
+/** Post */
+export type Post = {
+  __typename?: 'Post';
+  content?: Maybe<Scalars['String']>;
+  id: Scalars['ID'];
+  title?: Maybe<Scalars['String']>;
+};
+
 export type Query = {
   __typename?: 'Query';
   /** User */
@@ -56,6 +64,7 @@ export type User = {
   __typename?: 'User';
   id: Scalars['ID'];
   name?: Maybe<Scalars['String']>;
+  posts: Array<Post>;
 };
 
 /** The connection type for User. */
