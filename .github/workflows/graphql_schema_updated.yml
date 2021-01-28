@@ -21,7 +21,7 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: '[GitHub Actions] Update GraphQL Schema'
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
@@ -33,8 +33,8 @@ jobs:
           body: GraphQL schema has been updated
           labels: automerge
 
-          # - name: Invoke workflow_dispatch
-          #   uses: benc-uk/workflow-dispatch@v1
-          #   with:
-          #     workflow: automerge
-          #     token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      - name: Invoke workflow_dispatch
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: automerge
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
