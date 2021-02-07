@@ -31,9 +31,3 @@ jobs:
           title: '[bot] Update GraphQL Schema'
           body: GraphQL schema has been updated
           labels: automerge
-
-      - name: Auto-approve Pull Request
-        uses: hmarr/auto-approve-action@v2.0.0
-        if: startsWith(github.head_ref, 'feature/update-graphql-schema') == true
-        with:
-          github-token: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
