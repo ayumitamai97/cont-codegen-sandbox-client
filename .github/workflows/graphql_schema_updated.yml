@@ -34,7 +34,7 @@ jobs:
 
       - name: Auto-approve Pull Request
         # uses: hmarr/auto-approve-action@v2.0.0
-        run: echo ${{ github.head_ref }}
+        run: echo '${{ toJson(github) }}'
         #         if: startsWith(github.head_ref, 'feature/update-graphql-schema') == true
         # with:
         #   github-token: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
